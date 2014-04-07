@@ -9,19 +9,17 @@
 	$pizzas = $xml->xpath("/menu/category[@name='Pizzas']/item");
 	if (isset($_POST['submit'])) {
 		foreach ($_POST as $key => $value) {
-			if ($key != "submit") {
-				$_SESSION[$key] = $value;
+			if ($key != "submit" && $value > 0) {
+				$_SESSION['cart'][$key] = $value;
 			}
 		}
-		echo "<pre>";
-		print_r($_SESSION);
-		echo "</pre>";
 	}
 ?>
 
 <?php
 	$fname = basename(htmlspecialchars($_SERVER['PHP_SELF']));
 	render("header", array("title" => "Pizzas"));
+	render("back");
 	
 	echo "<form id='pizzaForm' action=$fname method='POST'>";
 	echo "<ul>";
@@ -34,7 +32,11 @@
 	echo "</ul>";
 	echo "<input type='submit' name='submit' value='Add to cart'>";
 	echo "</form>";
-	
-	render("back");
+?>
+
+<br>
+<a href = 'cart.php'>Shopping cart</a>
+
+<?	
 	render("footer");
 ?>

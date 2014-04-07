@@ -7,4 +7,8 @@ function render($name, $data = array()) {
 		require($file);
 }
 
+function clear_cart($data = array()) {
+	unset($_SESSION['cart']);
+}
+
 ?>
