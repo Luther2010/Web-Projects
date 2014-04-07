@@ -1,0 +1,49 @@
+<menu>
+	<category name="Pizzas">
+		<item name="Tomato &amp; Cheese">
+			<size type="large">
+				<price>975</price>
+			</size>
+			<size type="small">
+				<price>550</price>
+			</size>
+		</item>
+		<item name="Onions">
+			<size type="large">
+				<price>1085</price>
+			</size>
+			<size type="small">
+				<price>685</price>
+			</size>
+		</item>
+		<item name="Peppers">
+			<size type="large">
+				<price>1085</price>
+			</size>
+			<size type="small">
+				<price>685</price>
+			</size>
+		</item>
+	</category>
+	<category name="Side Orders">
+		<item name="Onion Rings">
+			<size type="large">
+				<price>295</price>
+			</size>
+			<size type="small">
+				<price>260</price>
+			</size>
+		</item>
+		<item name="French Fries">
+			<size type="large">
+				<price>265</price>
+			</size>
+			<size type="small">
+				<price>225</price>
+			</size>
+		</item>
+		<item name="Chicken Wings">
+			<price>575</price>
+		</item>
+	</category>
+</menu>
