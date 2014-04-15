@@ -8,6 +8,19 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, table, ul, li {
 	background: none;
 }
 
+h1, h2, h3, h4, h5, h6, li {
+	line-height:100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+}
+
+h1 {
+	font-size:33px;
+	margin-bottom:15px;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -16,4 +29,30 @@ body {
 	line-height: 21px;
 	color: black;
 	background-color: #e0d48a;
+}
+
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+	padding: 20px 0 10px 0;
+}
+
+#header {
+	padding: 0px 0px 5px;
+}
+
+#header .top_banner {
+	background: url(../img/header.jpg) no-repeat left top;
+	background-size: 100% 100%;
+	height: 150px;
+	padding: 50px 35px 0px 560px;
+	border-radius: 1em;
+	box-shadow: 0 0 2px 2px #c3b984;
+}
+
+#page_content{
+	border-radius: 5px;
+	padding:10px;
+	background:url(../img/body.jpg) repeat;
+	box-shadow: 0 0 2px 2px #c3b984;
 }
