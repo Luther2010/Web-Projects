@@ -2,42 +2,14 @@
 	session_start();
 	require_once("../includes/helpers.php");
 	
-	if (!isset($_SESSION["cart"]))
-		$_SESSION["cart"] = array();
-	$xml_file = __DIR__ . "/../data.xml";
-	$xml = simplexml_load_file($xml_file);
-	$sides = $xml->xpath("/menu/category[@name='Side Orders']/item");
-	if (isset($_POST['submit'])) {
-		foreach ($_POST as $key => $value) {
-			if ($key != "submit" && $value > 0) {
-				$_SESSION['cart'][$key] = $value;
-			}
-		}
-	}
-?>
-
-<?php
+	add_to_cart();
+	$item_list = load_xml("Side Orders");
 	$fname = basename(htmlspecialchars($_SERVER['PHP_SELF']));
-	render("header", array("title" => "Side Orders"));
-	render("back");
-	
-	echo "<form id='sideForm' action=$fname method='POST'>";
-	echo "<ul>";
-	foreach ($xml->xpath("/menu/category[@name='Side Orders']/item") as $side) {
-		echo "<li>";
-		echo $side[@"name"];
-		echo "<input type='text' name={$side[@'name']} value='0'>";
-		echo "</li>";
-	}
-	echo "</ul>";
-	echo "<input type='submit' name='submit' value='Add to cart'>";
-	echo "</form>";
 ?>
-
-<br>
-<a href = 'cart.php'>Shopping cart</a>
 
 <?php
-	render("footer");
+	render("category", array(
+	"header"=>array("title"=>"Side Orders"), 
+	"body"=>array("action"=>$fname, "list"=>$item_list),
+	"footer"=>array()))
 ?>
-	
