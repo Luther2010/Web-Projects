@@ -11,4 +11,4 @@
 				<div class = "top_banner">
 					<h1><?php echo htmlspecialchars($title); ?></h1>
 				</div>
-			</div/
+			</div>

@@ -5,8 +5,8 @@ function render($name, $data = array()) {
 	if ($name == "category") {
 		render("header", $header);
 		render("category_body", $body);
-		echo "<br>";
-		echo "<a href = 'cart.php'>Shopping cart</a>";
+		//echo "<br>";
+		//echo "<a href = 'cart.php'>Shopping cart</a>";
 		render("footer");
 	}
 	else {
