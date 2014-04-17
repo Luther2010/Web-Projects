@@ -11,17 +11,22 @@
 	<div class = "right_section">
 		<?php if (isset($list)) : ?>
 			<form action="<?php echo $action ?>" method="POST">
-				<ul>
-					<?php foreach ($list as $item) : ?>
-						<li>
-							<?php 
-								echo $item[@"name"];
-								echo "<input type='text' name={$item[@'name']} value='0'>";
-							?>
-						</li>
-					<?php endforeach ?>
-				</ul>
-				<input type='submit' name='submit' value='Add to cart'>
+				<div class="item_list">
+					<ul>
+						<?php foreach ($list as $item) : ?>
+							<div class="item">
+								<div>
+									<img src="../img/<?php echo ($item[@"name"] . ".jpg"); ?>">
+									<b><?php echo $item[@"name"]; ?></b>
+								</div>
+								<!--<?php echo $item[@"name"]; ?>-->
+								<div>test</div>
+								<input type='submit' name='submit' value='Add to cart'>
+							</div>
+						<?php endforeach ?>
+					</ul>
+					<input type='submit' name='submit' value='Add to cart'>
+				</div>
 			</form>
 		<?php endif ?>
 	</div>
