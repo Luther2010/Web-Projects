@@ -12,8 +12,10 @@
 ?>
 
 <?php 
-	render("header", array("title" => "Shopping Cart"));
-	render("back");
+	render("category", array(
+	"header"=>array("title"=>"Home"), 
+	"body"=>array(),
+	"footer"=>array()))
 ?>
 
 <?php if ($empty): ?>
